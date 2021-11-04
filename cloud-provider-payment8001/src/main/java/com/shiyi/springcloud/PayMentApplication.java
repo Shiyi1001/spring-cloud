@@ -1,5 +1,6 @@
 package com.shiyi.springcloud;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -11,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Version V1.0
  */
 @SpringBootApplication
+@MapperScan("com.shiyi.springcloud.mapper") //或者直接在mapper类上添加注解@Mapper
 public class PayMentApplication {
     public static void main(String[] args) {
         SpringApplication.run(PayMentApplication.class, args);

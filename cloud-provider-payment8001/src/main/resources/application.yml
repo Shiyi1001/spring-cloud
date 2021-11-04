@@ -6,10 +6,15 @@ spring:
     name: cloud-payment-service
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.139.11:3306/db2019?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.139.11:3306/project_study?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: root
+  # 解决热部署后出现访问404问题
+  devtools:
+    restart:
+      poll-interval: 3000ms
+      quiet-period: 2999ms
 
 
 mybatis:
