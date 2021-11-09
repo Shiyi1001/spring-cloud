@@ -1,0 +1,14 @@
+server:
+  port: 8006
+
+spring:
+  application:
+    name: consul-provider-payment
+  #consul注册中心地址
+  cloud:
+    consul:
+      host: 192.168.139.11    #远程consul地址
+      port: 8500
+      discovery:
+        hostname: 192.168.139.1   #本地和虚拟机同频地址
+        service-name: ${spring.application.name}
