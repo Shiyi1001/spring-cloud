@@ -23,6 +23,6 @@ public class PaymentController {
 
     @GetMapping("zk")
     public String paymentZk(){
-        return "SpringCloud with Zookeeper:" + serverPort + "\t" + UUID.randomUUID().toString();
+        return "SpringCloud with Zookeeper:" + serverPort + "\t" + UUID.randomUUID();
     }
 }

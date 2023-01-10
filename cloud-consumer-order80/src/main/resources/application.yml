@@ -4,10 +4,6 @@ server:
 spring:
   application:
     name: cloud-order-service
-  devtools:
-    restart:
-      poll-interval: 3000ms
-      quiet-period: 2999ms
 
 eureka:
   client:

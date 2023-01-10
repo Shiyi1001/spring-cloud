@@ -12,17 +12,17 @@
     <artifactId>cloud-consumerzk-order80</artifactId>
 
     <dependencies>
-        <!-- SpringBoot整合Web组件 -->
+        <!-- SpringBoot整合Web组件-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <dependency><!-- 引入自己定义的api通用包，可以使用Payment支付Entity -->
+        <dependency><!--引入自己定义的api通用包，可以使用Payment支付Entity -->
             <groupId>com.shiyi.springcloud</groupId>
             <artifactId>cloud-api-commons</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <!-- SpringBoot整合zookeeper客户端 -->
+        <!-- SpringBoot整合zookeeper客户端-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>
@@ -37,12 +37,6 @@
             <groupId>org.apache.zookeeper</groupId>
             <artifactId>zookeeper</artifactId>
             <version>3.4.10</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
