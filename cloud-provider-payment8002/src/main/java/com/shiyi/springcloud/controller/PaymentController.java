@@ -44,4 +44,10 @@ public class PaymentController {
         Payment payment = paymentService.getPaymentById(id);
         return CommonResponseResult.successResult("查询成功，serverport：" + serverport,payment);
     }
+
+    @GetMapping(value = "lb")
+    public String getPaymentLB()
+    {
+        return serverport;
+    }
 }
