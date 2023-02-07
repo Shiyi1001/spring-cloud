@@ -38,4 +38,14 @@ public class OrderController {
         CommonResponseResult commonResponseResult = restTemplate.getForObject(PaymentSrv_URL + "/payment/get/" + id, CommonResponseResult.class,id);
         return commonResponseResult;
     }
+
+    @GetMapping("payment/getForEntity/{id}")
+    public CommonResponseResult getPayment2(@PathVariable("id") Long id){
+        ResponseEntity<CommonResponseResult> responseEntity = restTemplate.getForEntity(PaymentSrv_URL + "/payment/get/" + id, CommonResponseResult.class, id);
+        if(responseEntity.getStatusCode().is2xxSuccessful()){
+            return responseEntity.getBody();
+        }else{
+            return CommonResponseResult.failerResult("操作报错");
+        }
+    }
 }
